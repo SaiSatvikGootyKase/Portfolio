@@ -1,0 +1,941 @@
+/* Global Styles */
+:root { 
+    --bg-color: rgb(21, 44, 56); 
+    --second-bg-color: #000000; 
+    --text-color: #fff; 
+    --main-color: #0ef; 
+    --three-bg-color:rgb(21, 44, 56); }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(270deg, var(--bg-color), var(--second-bg-color), var(--three-bg-color)); /* Reintroducing animated gradient */
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Keeping the animation */
+    color: var(--text-color);
+    background-attachment: fixed; /* Prevent background from changing */
+}
+
+/* Ensure form doesn't affect background */
+.contact form {
+    background: transparent;
+}
+
+.contact form input,
+.contact form textarea {
+    background: rgb(21, 44, 56) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff !important;
+}
+
+/* Override browser auto-fill styles */
+.contact form input:-webkit-autofill,
+.contact form input:-webkit-autofill:hover,
+.contact form input:-webkit-autofill:focus,
+.contact form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgb(21, 44, 56) inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background-color: rgb(21, 44, 56) !important;
+}
+
+/* Firefox auto-fill override */
+.contact form input:-moz-autofill {
+    background-color: rgb(21, 44, 56) !important;
+    color: #ffffff !important;
+}
+
+/* Ensure consistent text color for all input states */
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    background: rgb(21, 44, 56) !important;
+    color: #ffffff !important;
+    border-color: var(--main-color) !important;
+    box-shadow: 0 0 10px rgba(0, 239, 255, 0.3) !important;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+section {
+    padding: 1rem 9% 0.5rem; /* Further reduced padding for smaller gaps between sections */
+    position: relative;
+    z-index: 0;
+}
+/* Header Styles */
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+    /* Keep this here even though it won't be applied by JS, in case it's used elsewhere or for future changes */
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.menu-btn {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+/* Typing text animation */
+/* .typing-text {
+    animation: typingPulse 2s ease-in-out infinite;
+} */
+
+@keyframes typingPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.home-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 1.8rem;
+    margin: 2rem 0 4rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+.home-content p strong {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.home-img img {
+    width: 22vw;
+    position: relative;
+    z-index: 1;
+}
+.home{
+    margin-block: 100px;
+}
+.about{
+    margin-block: 150px;
+}
+.services{
+    margin-bottom: 100px;
+}
+.contact{
+    margin-block: 100px;
+}
+
+/* Social Media Icons */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+    transform: scale(1);
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    transform: scale(1.1) translateY(-3px);
+}
+
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    transform: scale(1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    box-shadow: 0 0 2rem var(--main-color);
+    transform: scale(1.05) translateY(-2px);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-img img {
+    width: 22vw;
+    animation: floatImage 8s ease-in-out infinite;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    margin: 2rem 0 3rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+.about-content p strong {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+/* Services Section */
+.services h2 {
+    margin-bottom: 5rem;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services-box {
+    flex: 1 1 30rem;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.03);
+    box-shadow: 0 0 1.5rem var(--main-color);
+}
+
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.services-box h3 {
+    font-size: 2.6rem;
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    flex-grow: 1;
+}
+
+/* Portfolio Section */
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch; /* Ensures all items stretch to the height of the tallest */
+    gap: 2.5rem;
+}
+
+.portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 350px; /* Consistent fixed height for the entire box */
+    border: 2px solid rgb(0, 242, 255); /* TEMPORARY: For debugging uniform height */
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 100%; /* Fixed height for image within the box */
+    object-fit: cover;
+    flex-shrink: 0; /* Prevent image from shrinking */
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cover the entire fixed height of the parent box */
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+    color: rgb(24, 25, 26);
+    text-align: left;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+/* Contact Section */
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: rgb(21, 44, 56);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+/* Remove spinner buttons from number input */
+.contact form .input-box input[type="number"]::-webkit-outer-spin-button,
+.contact form .input-box input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.contact form .input-box input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+/* Custom Message Modal */
+.message-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    margin: 15% auto;
+    padding: 0;
+    border: 2px solid var(--main-color);
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 2rem var(--main-color);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-body {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+#modalMessage {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--main-color);
+    width: 0%;
+    animation: progressGrow 4s linear forwards;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+@keyframes progressGrow {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 20% auto;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    #modalMessage {
+        font-size: 1.4rem;
+    }
+    
+    .progress-bar {
+        height: 3px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--bg-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 120vw;
+        margin-top: 4rem;
+        transform: translateY(-40px);
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 617px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+} 
+
+
+
+.input-box{
+    color: #ffffff;
+}
+
+.content{
+    text-align: left;
+}
+
+/* Additional input consistency rules */
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form input[type="number"],
+.contact form textarea {
+    background-color: rgb(21, 44, 56) !important;
+    background-image: none !important;
+}
+
+/* Override any browser-specific styling */
+.contact form input,
+.contact form textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: rgb(21, 44, 56) !important;
+}
+
+/* Profile Image Positioning - Clean and optimized */
+/* .home-img {
+    margin-top: -40px;
+    position: relative;
+    z-index: 1;
+}
+
+.home-img img {
+    width: 22vw;
+    position: relative;
+    z-index: 1;
+    border-radius: 0;
+    transition: all 0.5s ease;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Home content - no animations */
+.home-content h3,
+.home-content h1,
+.home-content p,
+.home-content .social-media,
+.home-content .btn {
+    animation: fadeInRight 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+/* Profile image enhanced animation */
+.home-img {
+    animation: fadeInLeftProfile 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-50px) translateY(-40px);
+    animation-delay: 0.2s;
+}
+
+.home-img img {
+    animation: profileFloat 6s ease-in-out infinite, floatImage 8s ease-in-out infinite;
+} */
+
+
+
+
+
+/* About section image animation - applied to home section as well */
+.about-img {
+    animation: fadeInLeft 1.5s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation-delay: 0.1s;
+}
+
+.about-img img {
+    animation: floatImage 8s ease-in-out infinite;
+}
+
+
+
+/* About section animations */
+.about-content h2,
+.about-content p {
+    animation: fadeInRight 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.about-content h2 { animation-delay: 0.2s; }
+.about-content p:nth-child(2) { animation-delay: 0.4s; }
+.about-content p:nth-child(3) { animation-delay: 0.6s; }
+
+
+
+/* Enhanced keyframe animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Special keyframe for home content with X offset */
+@keyframes fadeInUpHome {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scroll behavior for better animation experience */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure animations work smoothly */
+* {
+    animation-fill-mode: both;
+}
+
+/* Add some bounce effect to the profile image */
+
+
+/* About section floating animation - now applied to home section as well */
+
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px) translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(-40px);
+    }
+}
+
+/* Special keyframe for profile image with Y offset */
+@keyframes fadeInLeftProfile {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px) translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(-40px);
+    }
+}
+
+
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

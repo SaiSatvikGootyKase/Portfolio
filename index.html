@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Satvik Gooty Kase - Portfolio</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">Sai <span>Satvik</span> Gooty Kase</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Skills</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="profile.png" alt="Profile Image">
+        </div>
+        <div class="home-content">
+            <h3>Hello, I’m</h3>
+            <h1>Sai Satvik Gooty Kase</h1>
+            <h3>And I'm <span class="typing-text"></span></h3>
+            <p> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m a final-year Computer Science student at REVA University with strong expertise in Java and software development. I have a solid foundation in problem-solving, data structures, and backend programming, and I enjoy building scalable applications. I’m eager to apply my skills in API integration, database management, and AI-driven solutions to real-world challenges.</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/saisatvik-gootykase/" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/SaiSatvikGootyKase" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:gk.saisatvik@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <a href="SaiSatvikGootyKase_Resume.pdf" class="btn" download target="_blank">
+              CV
+            </a>
+              
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-img" data-aos="fade-right">
+        </div>
+        <div class="about-content" data-aos="fade-left">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p>
+                         &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   I’m Sai Satvik Gooty Kase, a final-year Computer Science student at REVA University with a passion for building efficient and impactful software solutions. 
+                My core expertise lies in <strong>Java, problem-solving, data structures, and backend programming</strong>, while I also have hands-on experience with <strong>full-stack development</strong> and am exploring <strong>AI/ML</strong> through projects and certifications.
+                </p>
+                <p>
+                 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I enjoy turning complex problems into simple, scalable applications and have worked on projects ranging from 
+                AI-powered tools like a <strong>Resume Analyzer</strong> to machine learning solutions such as a <strong>Crop Recommendation System</strong>. 
+                I am eager to bring my skills in <strong>Java development, database management, and API integration</strong> to real-world challenges, while continuously growing as a developer.  
+                </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="services-container">
+            <div class="services-box" data-aos="fade-up" data-aos-delay="200">
+                <!-- Icon options: fa-robot, fa-brain, fa-microchip, fa-network-wired -->
+                <i class="fas fa-robot"></i>
+                <h3>Generative AI</h3>
+                <div class="content">
+                    <p>Exploring advanced AI techniques, from neural networks to generative models, to develop next-generation intelligent systems.</p>
+                    <p>Transforming raw data into actionable insights by applying machine learning and automation for real-world impact.</p>
+                    
+                </div>
+                <a href="https://media.geeksforgeeks.org/courses/certificates/8f784dbfb6c7e7d84a2819ac32ae21a9.pdf" target="_blank" class="btn">Achievements</a>
+            </div>
+            <div class="services-box" data-aos="fade-up" data-aos-delay="200">
+                <!-- Icon options: fa-java, fa-coffee, fa-code, fa-cogs -->
+                <i class="fab fa-java"></i>
+                <h3>Java Programming</h3>
+               <div class="content">
+                <p>Building efficient and modular applications using strong Java fundamentals and object-oriented programming principles.</p>
+                <p>Writing clean, maintainable, and reusable code to deliver scalable business solutions across diverse domains.</p>
+                 </div>
+                <a href="https://www.hackerrank.com/certificates/iframe/ca3fc2abac78" target="_blank" class="btn">Achievements</a>
+            </div>
+            <div class="services-box" data-aos="fade-up" data-aos-delay="200">
+                <!-- Icon options: fa-laptop-code, fa-layer-group, fa-server, fa-database -->
+                <i class="fas fa-laptop-code"></i>
+                <h3>Full-Stack </h3>
+                <div class="content">
+                    <p>Mastering frontend and backend technologies to design scalable, secure, and high-performance web applications.</p>
+                    <p>Integrating databases, APIs, and cloud services to create seamless, innovative, and user-focused digital solutions.</p>
+                </div>
+                <a href="https://media.geeksforgeeks.org/courses/certificates/fa8e6c901aa9bcc0ab2855ce09998476.pdf" target="_blank" class="btn">Achievements</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2 class="heading"> <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box" data-aos="fade-up" data-aos-delay="400">
+                <img src="pro1.png" alt="MockMeet.AI">
+                <div class="portfolio-layer">
+                    <h4>MockMeet.AI </h4>
+                    <p>An AI-driven interview simulator with GPT-based question generation, real-time scoring, and progress tracking. Built with React.js frontend, Flask REST API, and SQLite for seamless performance.</p>
+                    <a href="https://igebra-git-main-sai-satviks-projects.vercel.app/" target="_blank"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box" data-aos="fade-up" data-aos-delay="200">
+                <img src="pro2.png" alt="Resume Analyzer">
+                <div class="portfolio-layer">
+                    <h4>Resume Analyzer</h4>
+                    <p>An AI-powered resume screening tool using FastAPI, React.js, and NLP techniques to analyze resumes, match them with job descriptions, and provide improvement feedback.</p>
+                    <a href="https://resume-analyzer-git-main-satviks-projects-a6d86c20.vercel.app?_vercel_share=PgnaKHsq3qtatfjN5Nxksz6aeRhLaSUu" target="_blank"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box" data-aos="fade-up">
+                <img src="pro3.png" alt="Crop Recommendation System">
+                <div class="portfolio-layer">
+                    <h4>Crop Recommendation</h4>
+                    <p>A machine learning–based crop prediction model (94% accuracy) developed with Scikit-learn, delivered as a web app to provide AI-powered crop suggestions for farmers.</p>
+                    <a href="https://crop-recommendation-giih.onrender.com" target="_blank"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="#" method="post" data-aos="fade-up">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="number" name="mobile" placeholder="Mobile Number" required>
+                <input type="text" name="subject" placeholder="Email Subject" required>
+            </div>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by <strong>Sai Satvik Gooty Kase</strong> | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- Custom Modal for Messages -->
+    <div id="messageModal" class="message-modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="modalMessage"></div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html> 
